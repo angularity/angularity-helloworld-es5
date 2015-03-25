@@ -51,7 +51,7 @@ require("%redacted%")
 ]),
 
     // web server port
-    port: 61680,
+    port: 55556,
 
     // enable / disable colors in the output (reporters and logs)
     colors: true,
