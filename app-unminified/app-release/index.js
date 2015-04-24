@@ -2,6 +2,10 @@
 'use strict';
 angular.module('hello-world', ['ui.router']).config(require("../hello-world/hello-world-routes"));
 },{"../hello-world/hello-world-routes":2}],2:[function(require,module,exports){
+helloWorldRoutes.$inject = [
+    '$stateProvider',
+    '$urlRouterProvider'
+];
 'use strict';
 function helloWorldRoutes($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
@@ -11,19 +15,15 @@ function helloWorldRoutes($stateProvider, $urlRouterProvider) {
         controller: require("../hello-world/hello-world.js")
     });
 }
-helloWorldRoutes.$inject = [
-    '$stateProvider',
-    '$urlRouterProvider'
-];
 module.exports = helloWorldRoutes;
 },{"../hello-world/hello-world.html":3,"../hello-world/hello-world.js":4}],3:[function(require,module,exports){
 module.exports = '<h1>{{title}}</h1>';
 },{}],4:[function(require,module,exports){
+HelloWorldController.$inject = ['$scope'];
 'use strict';
 function HelloWorldController($scope) {
     $scope.title = 'hello world';
 }
-HelloWorldController.$inject = ['$scope'];
 module.exports = HelloWorldController;
 },{}]},{},[1])
 //# sourceMappingURL=index.js.map
